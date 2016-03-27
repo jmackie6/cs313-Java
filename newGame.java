@@ -43,33 +43,233 @@ public class newGame extends HttpServlet {
         
         
         String date = request.getParameter("date");
+        String game_name = request.getParameter("game_name");  
         
-        String game_name = request.getParameter("game_name");
-        
-        String player = request.getParameter("name");
-        
-        String score = request.getParameter("total");
-        
+        String player = request.getParameter("name");       
+        String score = request.getParameter("total");       
         String winner = request.getParameter("1");
-        try {
-            out.print("<p>into try</p>");
-            this.makeConnection();
+        
+        String player2 = request.getParameter("name2");  
+        String score2 = request.getParameter("total2");       
+        String winner2 = request.getParameter("2");
+        
+        String player3 = request.getParameter("name3");       
+        String score3 = request.getParameter("total3");       
+        String winner3 = request.getParameter("3");
+        
+        String player4 = request.getParameter("name4");       
+        String score4 = request.getParameter("total4");       
+        String winner4 = request.getParameter("4");
+        
+        String player5 = request.getParameter("name5");       
+        String score5 = request.getParameter("total5");       
+        String winner5 = request.getParameter("5");
+        
+        String player6 = request.getParameter("name6");       
+        String score6 = request.getParameter("total6");       
+        String winner6 = request.getParameter("6");
+        
+        String player7 = request.getParameter("name7");       
+        String score7 = request.getParameter("total7");       
+        String winner7 = request.getParameter("7");
+        
+        String player8 = request.getParameter("name8");       
+        String score8 = request.getParameter("total8");       
+        String winner8 = request.getParameter("8");
+        
+        
+           
+                
+                
+                
+                
+                 try {
+                this.makeConnection();
+                
+
+                
+                String query = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
+                
+                PreparedStatement st = con.prepareStatement(query);
+                
+                st.setString (1, date);
+                st.setString (2, winner);
+                st.setString (3, game_name);
+                st.setString (4, score);
+                st.setString (5, player);
+
+                st.execute();           
+                
+                
                 
             
-            //String query = "INSERT INTO players (score, player_name)" + " VALUES (?, ?)";
-            String query = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
-            //String query = " INSERT INTO players (player_name) VALUES ('erin')";
-            // create the mysql insert preparedstatement
-            PreparedStatement st = con.prepareStatement(query);
             
-            st.setString (1, date);
-            st.setString (2, winner);
-            st.setString (3, game_name);
-            st.setString (4, score);
-            st.setString (5, player);
+            if(!player2.equals("")) 
+            {
+                
+                this.makeConnection();
+                out.print("<p>connection</p>");
+
+                String query2 = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
+                PreparedStatement st2 = con.prepareStatement(query2);
+
+                st2.setString (1, date);
+                st2.setString (2, winner2);
+                st2.setString (3, game_name);
+                st2.setString (4, score2);
+                st2.setString (5, player2);
+
+                st2.execute();           
+                out.print("<p>execute2</p>");
             
-            st.execute();           
-            out.print("<p>execute</p>");
+            }
+            else
+            {
+                out.println("failed, it was empty\n");
+            }
+            
+            if(!player3.equals("")) 
+            {
+                
+                this.makeConnection();
+                out.print("<p>connection</p>");
+
+                String query3 = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
+                PreparedStatement st3 = con.prepareStatement(query3);
+
+                st3.setString (1, date);
+                st3.setString (2, winner3);
+                st3.setString (3, game_name);
+                st3.setString (4, score3);
+                st3.setString (5, player3);
+
+                st3.execute();           
+                out.print("<p>execute3</p>");
+            
+            }
+            else
+            {
+                out.println("failed, it was empty\n");
+            }
+            
+            if(!player4.equals("")) 
+            {
+                
+                this.makeConnection();
+                out.print("<p>connection</p>");
+
+                String query4 = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
+                PreparedStatement st4 = con.prepareStatement(query4);
+
+                st4.setString (1, date);
+                st4.setString (2, winner4);
+                st4.setString (3, game_name);
+                st4.setString (4, score4);
+                st4.setString (5, player4);
+
+                st4.execute();           
+                out.print("<p>execute3</p>");
+            
+            }
+            else
+            {
+                out.println("failed, it was empty\n");
+            }
+            
+            if(!player5.equals("")) 
+            {
+                
+                this.makeConnection();
+                out.print("<p>connection</p>");
+
+                String query5 = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
+                PreparedStatement st5 = con.prepareStatement(query5);
+
+                st5.setString (1, date);
+                st5.setString (2, winner5);
+                st5.setString (3, game_name);
+                st5.setString (4, score5);
+                st5.setString (5, player5);
+
+                st5.execute();           
+                out.print("<p>execute3</p>");
+            
+            }
+            else
+            {
+                out.println("failed, it was empty\n");
+            }
+            
+            if(!player6.equals("")) 
+            {
+                
+                this.makeConnection();
+                out.print("<p>connection</p>");
+
+                String query6 = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
+                PreparedStatement st6 = con.prepareStatement(query6);
+
+                st6.setString (1, date);
+                st6.setString (2, winner6);
+                st6.setString (3, game_name);
+                st6.setString (4, score6);
+                st6.setString (5, player6);
+
+                st6.execute();           
+                out.print("<p>execute3</p>");
+            
+            }
+            else
+            {
+                out.println("failed, it was empty\n");
+            }
+            if(!player7.equals("")) 
+            {
+                
+                this.makeConnection();
+                out.print("<p>connection</p>");
+
+                String query7 = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
+                PreparedStatement st7 = con.prepareStatement(query7);
+
+                st7.setString (1, date);
+                st7.setString (2, winner7);
+                st7.setString (3, game_name);
+                st7.setString (4, score7);
+                st7.setString (5, player7);
+
+                st7.execute();           
+                out.print("<p>execute3</p>");
+            
+            }
+            else
+            {
+                out.println("failed, it was empty\n");
+            }
+            
+            if(!player8.equals("")) 
+            {
+                
+                this.makeConnection();
+                out.print("<p>connection</p>");
+
+                String query8 = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
+                PreparedStatement st8 = con.prepareStatement(query8);
+
+                st8.setString (1, date);
+                st8.setString (2, winner8);
+                st8.setString (3, game_name);
+                st8.setString (4, score8);
+                st8.setString (5, player8);
+
+                st8.execute();           
+                out.print("<p>execute3</p>");
+            
+            }
+            else
+            {
+                out.println("");
+            }
             response.sendRedirect("home.jsp");
         }
         catch (Exception e){
