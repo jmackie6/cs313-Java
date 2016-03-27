@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Form
-    Created on : Mar 11, 2016, 11:08:20 AM
+    Document   : search
+    Created on : Mar 26, 2016, 9:48:35 AM
     Author     : Jared
 --%>
 
@@ -58,43 +58,52 @@
                     </div>
                 </div>
             </div>
-            <div id="top"><ul id="menu_wrap" class="Gray">
+            <div id="top">
+                <ul id="menu_wrap" class="Gray">
                 <li class="button"><a href="NewGameForm.jsp">New Game</a></li>
                     <li class="button"><a href="Form.jsp">Continue Game</a></li>
                     <li class="button"><a href="player.jsp">Player Stats</a></li>
                     <li class="button"><a href="Game">Games Played</a></li>
                     <li class="button"><a href="logout.jsp">Logout</a></li> 
                     <li class="button"><a href="search.jsp">Search BGG</a></li></ul>
-<!--                    <li class="search"><input type="text" name="bgg" placeHolder="Search"  /></li></ul>-->
                 
                 
             </div>
             
             <center>
                 
-                
+<h1>Search Board Game Geek</h1>  
+<h4>For specific data about a game search by ID otherwise search by game name to get the Id or to see if that game exist <h4>
 <div id="login-form">
-    <h1>New Game Info</h1>
-<form method="post" action="ContinueGame">
+    <h2>Search For board game</h2>
+<form method="post" action="BoardGameGeek">
+<!--<form method="post" action="BGG">    -->
 <table align="center" width="30%" border="0">
 <tr>
-<td><input type="text" name="game_name" placeholder="Game Name" required /></td>
+<td><input type="text" name="game_name" placeholder="Game Name" /></td>
 </tr>
 <tr>
-<td><input type="date" name="date" placeholder="Date of game" required /></td>
+<td><button type="submit" name="submit">Search Boardgame</button></td>
 </tr>
+</table>
+</form>
+<h2>Search by Game Id</h2>
+<form method="post" action="BoardGameGeekId">
+<!--<form method="post" action="BGG">    -->
+<table align="center" width="30%" border="0">
+<tr>
+<td><input type="text" name="game_id" placeholder="Game ID to Search" /></td>
 </tr>
 <tr>
-<td><button type="submit" name="submit">Submit info</button></td>
+<td><button type="submit" name="submit">Search Game Id</button></td>
 </tr>
 <tr>
 <td><a href="home.jsp">Back To Homepage</a></td>
 </tr>
 </table>
 </form>
+</form>
 </div>
 </center>
       </body>
 </html>      
-            
-

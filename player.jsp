@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Form
-    Created on : Mar 11, 2016, 11:08:20 AM
+    Document   : player
+    Created on : Mar 26, 2016, 12:49:55 PM
     Author     : Jared
 --%>
 
@@ -11,7 +11,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Home Page</title>
+<title>player form page</title>
 <script src="new_game_form.js"></script>
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="home.css">
@@ -58,14 +58,15 @@
                     </div>
                 </div>
             </div>
-            <div id="top"><ul id="menu_wrap" class="Gray">
+            <div id="top">
+                <ul id="menu_wrap" class="Gray">
                 <li class="button"><a href="NewGameForm.jsp">New Game</a></li>
                     <li class="button"><a href="Form.jsp">Continue Game</a></li>
                     <li class="button"><a href="player.jsp">Player Stats</a></li>
                     <li class="button"><a href="Game">Games Played</a></li>
                     <li class="button"><a href="logout.jsp">Logout</a></li> 
                     <li class="button"><a href="search.jsp">Search BGG</a></li></ul>
-<!--                    <li class="search"><input type="text" name="bgg" placeHolder="Search"  /></li></ul>-->
+                
                 
                 
             </div>
@@ -74,18 +75,14 @@
                 
                 
 <div id="login-form">
-    <h1>New Game Info</h1>
-<form method="post" action="ContinueGame">
+    <h1>Get Player Stats</h1>
+<form method="post" action="Player">
 <table align="center" width="30%" border="0">
 <tr>
-<td><input type="text" name="game_name" placeholder="Game Name" required /></td>
+<td><input type="text" name="player_name" placeholder="Palyer Name" required /></td>
 </tr>
 <tr>
-<td><input type="date" name="date" placeholder="Date of game" required /></td>
-</tr>
-</tr>
-<tr>
-<td><button type="submit" name="submit">Submit info</button></td>
+<td><button type="submit" name="submit">Search player</button></td>
 </tr>
 <tr>
 <td><a href="home.jsp">Back To Homepage</a></td>
@@ -96,5 +93,3 @@
 </center>
       </body>
 </html>      
-            
-
