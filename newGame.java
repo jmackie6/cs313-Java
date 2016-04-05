@@ -76,18 +76,12 @@ public class newGame extends HttpServlet {
         String player8 = request.getParameter("name8");       
         String score8 = request.getParameter("total8");       
         String winner8 = request.getParameter("8");
-        
-        
-           
-                
-                
-                
+               
                 
                  try {
                 this.makeConnection();
                 
-
-                
+   
                 String query = "INSERT INTO players (date, winner, game_name, score, player_name)" + " VALUES (?, ?, ?, ?, ?)";
                 
                 PreparedStatement st = con.prepareStatement(query);
@@ -270,6 +264,7 @@ public class newGame extends HttpServlet {
             {
                 out.println("");
             }
+            
             response.sendRedirect("home.jsp");
         }
         catch (Exception e){

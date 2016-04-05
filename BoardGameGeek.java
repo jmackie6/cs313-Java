@@ -102,7 +102,7 @@ public class BoardGameGeek extends HttpServlet {
 "                    <li class=\"button\"><a href=\"player.jsp\">Player Stats</a></li>\n" +
 "                    <li class=\"button\"><a href=\"Game\">Games Played</a></li>\n" +
 "                    <li class=\"button\"><a href=\"logout.jsp\">Logout</a></li> \n" +
-"                    <li class=\"button\"><a href=\"search.jsp\">Search BGG</a></li>\n" +
+"                    <li class=\"button\"><a href=\"search.jsp\">Search Board Game Geek</a></li>\n" +
 "                \n" +
 "            </div>\n" +
 "            \n"); 

@@ -90,7 +90,7 @@ public class BoardGameGeekId extends HttpServlet {
 "                    <li class=\"button\"><a href=\"player.jsp\">Player Stats</a></li>\n" +
 "                    <li class=\"button\"><a href=\"Game\">Games Played</a></li>\n" +
 "                    <li class=\"button\"><a href=\"logout.jsp\">Logout</a></li> \n" +
-"                    <li class=\"button\"><a href=\"search.jsp\">Search BGG</a></li>\n" +
+"                    <li class=\"button\"><a href=\"search.jsp\">Search Board Game Geek</a></li>\n" +
 "                    <li class=\"search\"><input type=\"text\" name=\"bgg\" placeHolder=\"Search\"  /></li></ul>\n" +
 "<!--                    <li class=\"search\"><a href=\"BGG2\"></a><input type=\"text\" name=\"bgg\" placeHolder=\"Search\"  /></li></ul>-->\n" +
 "                \n" +

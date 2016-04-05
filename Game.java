@@ -93,20 +93,20 @@ public class Game extends HttpServlet {
 "                    <li class=\"button\"><a href=\"player.jsp\">Player Stats</a></li>\n" +
 "                    <li class=\"button\"><a href=\"Game\">Games Played</a></li>\n" +
 "                    <li class=\"button\"><a href=\"logout.jsp\">Logout</a></li> \n" +
-"                    <li class=\"button\"><a href=\"search.jsp\">Search BGG</a></li>\n" +
+"                    <li class=\"button\"><a href=\"search.jsp\">Search Board Game Geek</a></li>\n" +
 "                \n" +
 "            </div>");
         
         try{
             this.makeConnection();
             
-            PreparedStatement pst = con.prepareStatement("SELECT * FROM players WHERE winner = \"yes\" OR winner = \"YES\" ORDER BY player_id DESC");
+            PreparedStatement pst = con.prepareStatement("SELECT * FROM players WHERE winner = \"yes\" OR winner = \"YES\" ORDER BY date DESC");
             //SELECT DISTINCT(Date) AS Date FROM buy ORDER BY Date DESC;
             //pst.setString(1, player);
             //pst.setString(2, pass);
-            out.println("prepare statment");
+            
             ResultSet rs = pst.executeQuery();
-            out.println("execute");
+            //out.println("execute");
             //out.print("<table border='1'>");
             out.println("<h1> Games played from most recent Starting at list</h1><br>");
             while(rs.next()) {
@@ -118,7 +118,7 @@ public class Game extends HttpServlet {
                 out.print("Game Name: "+ game_name + "<br>");
                 out.print("Date of game: "+ date + "<br>");                
                 out.print("Game Winner: "+ player_name + "<br>");
-                out.print("Players winning Score: " + score + "<br><br>");
+                out.print("Players Winning Score: " + score + "<br><br>");
             }
             out.print("</body>\n" + "</html>");
             rs.close();

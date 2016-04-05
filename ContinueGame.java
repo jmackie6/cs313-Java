@@ -259,7 +259,7 @@ public class ContinueGame extends HttpServlet {
 "                    <li class=\"button\"><a href=\"player.jsp\">Player Stats</a></li>\n" +
 "                    <li class=\"button\"><a href=\"Game\">Games Played</a></li>\n" +
 "                    <li class=\"button\"><a href=\"logout.jsp\">Logout</a></li> \n" +
-"                    <li class=\"button\"><a href=\"search.jsp\">Search BGG</a></li></ul>\n" +
+"                    <li class=\"button\"><a href=\"search.jsp\">Search Board Game Geek</a></li></ul>\n" +
 "                    \n" +
 "                    \n" +
 "                \n" +
@@ -278,7 +278,7 @@ public class ContinueGame extends HttpServlet {
             st.setString (2, date);
             
             ResultSet rs = st.executeQuery();
-            out.println("<h3> Player names and thier individual scores from las time played</h3><br>");
+            out.println("<h3> Player names and thier individual scores from last time played</h3><br>");
             while(rs.next()) {
 
                 String player_name = rs.getString("player_name");
@@ -289,7 +289,7 @@ public class ContinueGame extends HttpServlet {
             }
             
             out.print("<div name=\"2\" id=\"2\">\n" +
-"                <form method=\"post\" action=\"newGame\">\n" +
+"                <form method=\"post\" action=\"updateGame\">\n" +
 "                    <center>\n" +
 "                        <br><br><h2>Make sure you fill out every field for each player or they will not be saved or submitted</h2>\n" +
 "                                <br/><br><h3>Game Name: <input type=\"text\" name=\"game_name\" value=\"" + game_name + "\"" + "required /><h3><br/><br>\n" +
@@ -343,7 +343,7 @@ public class ContinueGame extends HttpServlet {
 "                <center>\n" +
 "                <input type=\"submit\" name=\"submit\" value =\"Submit Game\"/>\n" +
 "                <input type=\"submit\" name=\"submit\" value =\"Save Game\"/>\n" +
-"                <input type=\"reset\" name=\"reset\" value =\"Reset Game\" action=\"reset\"/>\n" +
+"                <input type=\"reset\" name=\"reset\" value =\"Reset Game\" action=\"reset\"/><br><br><br>\n" +
 "                <!--<input type=\"button\" name=\"new_game\" value=\"New game\" action=\"Form.jsp\">-->\n" +
 "                </center>\n" +
 "                </form>\n" +
