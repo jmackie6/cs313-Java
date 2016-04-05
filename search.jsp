@@ -65,7 +65,7 @@
                     <li class="button"><a href="player.jsp">Player Stats</a></li>
                     <li class="button"><a href="Game">Games Played</a></li>
                     <li class="button"><a href="logout.jsp">Logout</a></li> 
-                    <li class="button"><a href="search.jsp">Search BGG</a></li></ul>
+                    <li class="button"><a href="search.jsp">Search Board Game Geek</a></li></ul>
                 
                 
             </div>
@@ -92,7 +92,7 @@
 <!--<form method="post" action="BGG">    -->
 <table align="center" width="30%" border="0">
 <tr>
-<td><input type="text" name="game_id" placeholder="Game ID to Search" /></td>
+<td><input type="text" name="game_id" placeholder="ID from objectID='xxxxx'" /></td>
 </tr>
 <tr>
 <td><button type="submit" name="submit">Search Game Id</button></td>

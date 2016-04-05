@@ -64,7 +64,7 @@
                     <li class="button"><a href="player.jsp">Player Stats</a></li>
                     <li class="button"><a href="Game">Games Played</a></li>
                     <li class="button"><a href="logout.jsp">Logout</a></li> 
-                    <li class="button"><a href="search.jsp">Search BGG</a></li></ul>
+                    <li class="button"><a href="search.jsp">Search Board Game Geek</a></li></ul>
 <!--                    <li class="search"><input type="text" name="bgg" placeHolder="Search"  /></li></ul>-->
                 
                 
